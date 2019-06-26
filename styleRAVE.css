@@ -32,18 +32,34 @@
 .headerButtons {
   background-color: #5A7A79;
   border-color: #526F6E;
-}
-
-#hhome {
   font-family: futura, sans-serif;
   font-color: black;
   font-size: 15px;
   position: fixed;
   top: 55px;
-  left: 0px;
   border-width: 3px;
   height: 50px;
-  width: 80px;
+  width: 90px;
+}
+
+#hhome {
+  left: 0px;
+}
+
+#hUtilitraian {
+  left: 90px;
+}
+
+#hDCT {
+  left: 180px;
+}
+
+#hEgal {
+  left: 270px;
+}
+
+#hOp {
+  left: 360px;
 }
 
 button:hover {
@@ -58,9 +74,65 @@ button:hover {
 
 #borderImage1 {
   position: fixed;
-  top: 58px;
+  top: 59px;
   height: 91.4%;
-  left: -100px;
+  left: -120px;
+  z-index: -1;
+}
+
+#borderImage2 {
+  position: fixed;
+  top: 58px;
+  height: 91.6%;
+  right: -47px;
+  z-index: -1;
+}
+
+#intro {
+  top: -85px;
+}
+
+#heading1 {
+  top: -90px;
+}
+
+#heading2 {
+  top: -50px;
+}
+
+#Utilitarian {
+  top: -55px;
+}
+
+#heading3 {
+  top: -15px;
+}
+
+#DCT {
+  top: -20px;
+}
+
+#heading4 {
+  top: 20px;
+}
+
+#Egalitarian {
+  top: 15px;
+}
+
+#heading5 {
+  top: 55px;
+}
+
+#personalOpinions {
+  top: 50px;
+}
+
+.bodyText {
+  width: 780px;
+  font-family: futura, sans-serif;
+  position: relative;
+  left: 300px;
   z-index: -1;
 }
 

@@ -4,25 +4,51 @@
     <title>Genetic Fetuses</title>
     <link rel="stylesheet" href="styleRAVE.css">
     <script>
-    var header, yPos, hhome, menu;
+    var header, yPos, hhome, menu, util, dct, egal, op;
       function yScroll (){
         header = document.getElementById("hbase");
         yPos = window.pageYOffset;
         home = document.getElementById("hhome");
+        util = document.getElementById("hUtilitraian");
+        dct = document.getElementById("hDCT");
+        egal = document.getElementById("hEgal");
+        op = document.getElementById("hOp")
         if (yPos > 150){
           header.style.height = "100px";
           home.style.display = "block";
-          home.style.left = "50%";
+          util.style.display = "none";
+          dct.style.display = "none";
+          egal.style.display = "none";
+          op.style.display = "none";
         } else {
           header.style.height = "150px";
           home.style.display = "block";
-          home.style.left = "0px";
+          util.style.display = "block";
+          dct.style.display = "block";
+          egal.style.display = "block";
+          op.style.display = "block";
         }
       }
 
       function scrollhome() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+      }
+
+      function scrollUtilitarian() {
+        window.scrollTo(0, 350);
+      }
+
+      function scrollDCT() {
+        window.scrollTo(0, 530);
+      }
+
+      function scrollEgal() {
+        window.scrollTo(0, 710);
+      }
+
+      function scrollOp() {
+        window.scrollTo(0, 895);
       }
 
       //function hMouseOver() {
@@ -46,116 +72,156 @@
       </div>
       <div class="header" id="hbuttons">
         <button class="headerButtons" onclick="scrollhome()" id="hhome">Home</button>
+        <button class="headerButtons" onclick="scrollUtilitarian()" id="hUtilitraian">Utilitarian Approach</button>
+        <button class="headerButtons" onclick="scrollDCT()" id="hDCT">A DCT Approach</button>
+        <button class="headerButtons" onclick="scrollEgal()" id="hEgal">Egalitarian Approach</button>
+        <button class="headerButtons" onclick="scrollOp()" id="hOp">Two Opinions</button>
       </div>
     </div>
     <div id="content">
       <img src="Baby.png" id="borderImage1" class="images"></img>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      <p>Hi</p>
-      
+      <img src="DNA.png" id="borderImage2" class="images"></img>
+      <div id="centerText">
+          <h3 id="heading1" class="bodyText">Background</h3>
+          <p id="intro" class="bodyText"> After recent developments in technology, we now have the ability to select our children's genetic features. This can lead towards the eradication of genetic diseases such as Down Syndrome, Parkinson's disease, Diabetes and many others. The issue arises however in two places. The first of which is, where do we draw the line? Do we allow parents to select the gender of their children to balance the family? What about athleticism, hair colour, height or any other desirable features? Secondly, we have the issue with creating a further divide in society. This expensive technology would only be affordable to the wealthy, would this result in genocide of poorer or less desirable cultures. Utilitarianism would let this go on while Egalitarianism and Divine Command Theory would both say no. So, what do we do?</p>
+           <! <button id="yesPoll" onclick="yesClick()">
+          <h3 id="heading2" class="bodyText">A Utilitarian Approach</h3>
+          <p id="Utilitarian" class="bodyText">The Utilitarian's among us would declare designer babies as a success for both humanity and society. The ability to remove illnesses from our offspring would undeniable do the greatest good for the greatest number, after all ethnic genocide doesn’t, physically harm anyone, everyone is alive and well, just maybe more athletic, less prone to genetic diseases and perhaps of a different skin colour.</p>
+          <h3 id="heading3" class="bodyText">A Divine Command Theory Approach</h3>
+          <p id="DCT" class="bodyText">The divine command theory clearly dictates that we should not edit our fetuses in any way. This comes from the idea that if God wanted something done then he would do it himself. If God wanted our fetuses changed to avoid diseases like Parkinson’s, then he would do it himself. Therefore, under the Divine Command Theory we should not alter our offspring.</p>
+          <h3 id="heading4" class="bodyText">An Egalitarian Approach</h3>
+          <p id="Egalitarian" class="bodyText">Egalitarianism is believing in what is fair and equal for all individuals. Now in a purely Egalitarian society we would not edit our genetics in fetuses as this technology is not available to everyone. As this technology is not cheap it would only be feasible for the wealthy to use. This is not at all equal to everyone and as such in an Egalitarian society we would not edit our offspring.</p>
+          <h3 id="heading5" class="bodyText">Two Personal Opinions</h3>
+          <p id="personalOpinions" class="bodyText">Personally, I would allow this to happen, I would allow doctors to edit the genetics of our offspring. To me the gain for us as a species of eliminating diseases like Parkinson’s and Huntington’s is worth the risks. In my idyllic society we would eliminate only genes which would cause illness unless specific permission is granted by a judge and an ethicist in collaboration. This could be for a balance in society in gender or another exceptional reason. This, I feel, would be the best outcome on this situation as it saves lives and avoids most of the ethical issues. </p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+          <p>hi</p>
+      </div>
     </div>
   </body>
 </html>
