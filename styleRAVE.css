@@ -124,8 +124,20 @@ button:hover {
   top: 55px;
 }
 
-#personalOpinions {
+#personalOpinion1 {
   top: 50px;
+}
+
+#personalOpinion2 {
+  top: 85px;
+}
+
+#heading6 {
+  top: 90px;
+}
+
+#pollIntro {
+  top: 85px;
 }
 
 .bodyText {
@@ -140,4 +152,28 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: #CEB5A7;
+}
+
+#placeholders {
+  color: #CEB5A7;
+  position: relative;
+  top: 80px;
+  left: 300px;
+  z-index: 1;
+}
+
+.bodyText {
+  text-align: justify;
+}
+
+#yesPoll {
+  top: 100px;
+  position: relative;
+  left: 550px;
+}
+
+#noPoll {
+  top: 100px;
+  position: relative;
+  left: 575px;
 }
