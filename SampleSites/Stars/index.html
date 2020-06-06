@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Starry Night</title>
+    <script src="two.js"></script>
+    <script type="text/javascript">
+      var mousePosX = 0;
+      var mousePosY = 0;
+      var NoOfNodes;
+
+      function mouse(e){
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+      }
+
+      function Setup(){
+        var firstRun = new Boolean(true);
+
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        var NoOfNodes = (w * h)/16000;
+
+        var posx = [];
+        var posy = [];
+
+        var distancex = 0;
+        var distancey = 0;
+        var distance;
+
+        var lineWidth = 0;
+
+        var Nodes = [];
+
+        var VelocityX = [];
+        var VelocityY = [];
+
+        var elem = document.getElementById("element");
+        var params = {width : w, height : (h + 110)};
+        var two = new Two(params).appendTo(elem);
+
+        var string = (w + 10) + "px " + (h + 110) + "px";
+        elem.style.backgroundSize = string;
+
+        var scrollImage = document.getElementById("scrollImage");
+        scrollImage.style.backgroundSize = "64px"
+        scrollImage.style.width = "64px";
+        scrollImage.style.height = "64px";
+        scrollImage.style.left = (w/2)-32 + "px";
+
+        var temp = 1;
+        for(i = 0; i < NoOfNodes; i++){
+          posx[i] = Math.round(Math.random() * w);
+          posy[i] = Math.round(Math.random() * h);
+
+          Nodes[i] = two.makeCircle(posx[i], posy[i], 1);
+          Nodes[i].fill = "#FFFFFF";
+
+
+          if(Math.round(Math.random() * 2) == 1){
+            temp = -1;
+          }else{
+            temp = 1;
+          }
+
+          VelocityX[i] = Math.random() - 0.5;
+          VelocityY[i] = Math.sqrt(0.5 - VelocityX[i] * VelocityX[i]) * temp;
+        }
+
+        setInterval(function(){
+          two.clear();
+          // var mouseCircle = two.makeCircle(mousePosX, mousePosY, 1)
+          // mouseCircle.fill = "#FFFFFF";
+          // mouseCircle.stroke = "FFFFFF";
+          // mouseCircle.opacity = 0.3;
+
+          for(i = 0; i < NoOfNodes; i++){
+            if(posx[i] <= 0 || posx[i] >= w){
+              VelocityX[i] *= -1;
+            }
+
+            if(posy[i] <= 0 || posy[i] >= h){
+              VelocityY[i] *= -1;
+            }
+
+            if(two.timeDelta != null){
+              posx[i] += VelocityX[i] * two.timeDelta;
+              posy[i] += VelocityY[i] * two.timeDelta;
+            }
+
+            Nodes[i] = two.makeCircle(posx[i], posy[i], 1);
+            Nodes[i].fill = "#FFFFFF";
+            Nodes[i].stroke = "#FFFFFF";
+            Nodes[i].opacity = 0.3;
+
+            for(j = (i + 1); j < NoOfNodes; j++){
+              distancex = Math.abs(posx[i] - posx[j]);
+              distancey = Math.abs(posy[i] - posy[j]);
+              distance = Math.sqrt((distancey * distancey) + (distancex * distancex));
+
+              if(distance < 150){
+                var line = two.makeLine(posx[i], posy[i], posx[j], posy[j]);
+
+                lineWidth = 500 / (distance * distance);
+                if(lineWidth > 0.8){
+                  lineWidth = 0.8;
+                }
+
+                line.linewidth = lineWidth;
+                line.stroke = "#FFFFFF";
+                line.opacity = 0.3;
+              }
+            }
+
+            distancex = Math.abs(posx[i] - mousePosX);
+            distancey = Math.abs(posy[i] - mousePosY);
+            distance = Math.sqrt((distancey * distancey) + (distancex * distancex));
+
+            if(distance < 150){
+              var line = two.makeLine(posx[i], posy[i], mousePosX, mousePosY);
+
+              lineWidth = 2000 / (distance * distance);
+              if(lineWidth > 1){
+                lineWidth = 1;
+              }
+
+              line.linewidth = lineWidth;
+              line.stroke = "#FFFFFF";
+              line.opacity = 0.3;
+            }
+
+            two.update();
+          }
+
+        }, 2);
+      }
+
+    </script>
+
+    <style>
+      #element{
+        background-image: url("bgImage.jpg");
+        margin: -10px;
+        border-radius: 45% / 15%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+
+      #title{
+        position: absolute;
+        left: 45%;
+        bottom:45%;
+        font-family: futura, sans-serif;
+        color: white;
+        font-size: 100px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      #scrollImage{
+        background-image: url("scroll.png");
+        position: absolute;
+        bottom: 75px;
+      }
+
+    </style>
+  </head>
+  <body onload = "Setup()">
+    <div id="element" onmousemove = "mouse(event)"></div>
+    <p id="title">A Starry Night</p>
+    <div id="scrollImage"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>This page is a work in progress.</p>
+  </body>
+</html>

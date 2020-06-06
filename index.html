@@ -1,105 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <title>Genetic Fetuses</title>
-    <link rel="stylesheet" href="styleRAVE.css">
-    <script>
-    var header, yPos, hhome, menu, util, dct, egal, op;
-      function yScroll (){
-        header = document.getElementById("hbase");
-        yPos = window.pageYOffset;
-        home = document.getElementById("hhome");
-        util = document.getElementById("hUtilitraian");
-        dct = document.getElementById("hDCT");
-        egal = document.getElementById("hEgal");
-        op = document.getElementById("hOp")
-        if (yPos > 150){
-          header.style.height = "100px";
-          home.style.display = "block";
-          home.style.left = "620px"
-          home.style.top = "0px"
-          home.style.height = "58px"
-          util.style.display = "none";
-          dct.style.display = "none";
-          egal.style.display = "none";
-          op.style.display = "none";
-        } else {
-          header.style.height = "150px";
-          home.style.display = "block";
-          util.style.display = "block";
-          dct.style.display = "block";
-          egal.style.display = "block";
-          op.style.display = "block";
-          home.style.left = "0px"
-          home.style.top = "55px"
-          home.style.height = "50px"
-        }
-      }
+    <title>Xander Grice</title>
+    <link rel="stylesheet" href="Styles/main.css">
 
-      function scrollhome() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+    <script src="Javascript/header.js"></script>
+    <script src="Javascript/body.js"></script>
 
-      function scrollUtilitarian() {
-        window.scrollTo(0, 350);
-      }
-
-      function scrollDCT() {
-        window.scrollTo(0, 530);
-      }
-
-      function scrollEgal() {
-        window.scrollTo(0, 710);
-      }
-
-      function scrollOp() {
-        window.scrollTo(0, 895);
-      }
-
-      window.addEventListener("scroll", yScroll);
-    </script>
   </head>
-  <body>
-    <div class="header" id="hbase">
-      <div class="header" id="hline1">
-      </div>
-      <div class="header" id="htitles">
-        <h5 id="htitle1">Should We Genetically Modify Our Children?</h5>
-      </div>
-      <div class="header" id="hbuttons">
-        <button class="headerButtons" onclick="scrollhome()" id="hhome">Home</button>
-        <button class="headerButtons" onclick="scrollUtilitarian()" id="hUtilitraian">Utilitarian Approach</button>
-        <button class="headerButtons" onclick="scrollDCT()" id="hDCT">A DCT Approach</button>
-        <button class="headerButtons" onclick="scrollEgal()" id="hEgal">Egalitarian Approach</button>
-        <button class="headerButtons" onclick="scrollOp()" id="hOp">Two Opinions</button>
-      </div>
+  <body id="main">
+    <div id="mover">
     </div>
-    <div id="content">
-      <img src="Baby.png" id="borderImage1" class="images"></img>
-      <img src="DNA.png" id="borderImage2" class="images"></img>
-          <h3 id="heading1" class="bodyText">Background</h3>
-          <p id="intro" class="bodyText"> After recent developments in technology, we now have the ability to select our children's genetic features. This can lead towards the eradication of genetic diseases such as Down Syndrome, Parkinson's disease, Diabetes and many others. The issue arises however in two places. The first of which is, where do we draw the line? Do we allow parents to select the gender of their children to balance the family? What about athleticism, hair colour, height or any other desirable features? Secondly, we have the issue with creating a further divide in society. This expensive technology would only be affordable to the wealthy, would this result in genocide of poorer or less desirable cultures. Utilitarianism would let this go on while Egalitarianism and Divine Command Theory would both say no. So, what do we do?</p>
-          <h3 id="heading2" class="bodyText">A Utilitarian Approach</h3>
-          <p id="Utilitarian" class="bodyText">The Utilitarian's among us would declare designer babies as a success for both humanity and society. The ability to remove illnesses from our offspring would undeniable do the greatest good for the greatest number, after all ethnic genocide doesn’t, physically harm anyone, everyone is alive and well, just maybe more athletic, less prone to genetic diseases and perhaps of a different skin colour.</p>
-          <h3 id="heading3" class="bodyText">A Divine Command Theory Approach</h3>
-          <p id="DCT" class="bodyText">The divine command theory clearly dictates that we should not edit our fetuses in any way. This comes from the idea that if God wanted something done then he would do it himself. If God wanted our fetuses changed to avoid diseases like Parkinson’s, then he would do it himself. Therefore, under the Divine Command Theory we should not alter our offspring.</p>
-          <h3 id="heading4" class="bodyText">An Egalitarian Approach</h3>
-          <p id="Egalitarian" class="bodyText">Egalitarianism is believing in what is fair and equal for all individuals. Now in a purely Egalitarian society we would not edit our genetics in fetuses as this technology is not available to everyone. As this technology is not cheap it would only be feasible for the wealthy to use. This is not at all equal to everyone and as such in an Egalitarian society we would not edit our offspring.</p>
-          <h3 id="heading5" class="bodyText">Two Personal Opinions</h3>
-          <p id="personalOpinion1" class="bodyText">Personally, I would take an Egalitarian approach for these issues. I would allow doctors to edit the genetics of our offspring. To me the gain for us as a species of eliminating diseases like Parkinson’s and Huntington’s is worth the risks. In my idyllic society we would eliminate only genes which would cause illness unless specific permission is granted by a judge and an ethicist in collaboration. This could be for a balance in society in gender or other exceptional circumstances. This, I feel, would be the best outcome on this situation as it saves lives and avoids most of the ethical issues. </p>
-          <p id="personalOpinion2" class="bodyText">I would personally take the Egalitarianism approach to this ethical issue. This is because if we can edit the genomes of our offspring, we can prevent harmful diseases from effecting our babies' lives. Knowing that your child is not going to develop any genetical diseases, like type 1 diabetes and down syndrome, is beneficial to provide safety and security for our wellbeing. It will prevent mass amounts of deaths and will not change the uniqueness and differences we appreciate within each other.</p>
-      <div id="placeholders">
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-        <p>placeholder</p>
-      </div>
+
+    <div id="empHist">
+      <p id="empHistTitle" class="headings">Employment History</p>
+      <p id="empHistContent" class="text">Despite coming straight out of one of the top universities in the world Xander Grice already has a wealth of experience within the workforce. Throughout his years in high school he worked for McDonalds in the back area were he proved in invaluable employee. Throughout his time at MIT he covered his living expenses by working as a freelance website developer. His clientele ranged from local businesses to individuals looking to spice up their online footprint.</p>
+      <image src="Images/HTML5icon.png" class="icons" id="icon1"></image>
     </div>
+
+    <div id="QandE">
+      <p id="QandETitle" class="headings">Qualifications and Eductaion</p>
+      <p id="QandEContent" class="text">Xander Grice has a wealth of qualifications to rival the best in the industry. He attended St Peter's College, Adelaide where he recieved a 45 in the IB. After graduation he recieved a scholarship to study Mathematics and Software Development at MIT. After completeing this double degree he acheived a PhD in Mathematics, also from MIT. His thesis was on fractal geometry and spcae filling curves, a very interesting and diverse branch of mathemtics focusing on apparently infinitely rough curves. He also has scores of accolades, from high distinctions in many mathematics competitons to a fantastic result in the Australian Physics Olympiad.</p>
+      <image src="Images/MITImage.png" class="icons"  id="icon2"></image>
+    </div>
+
+    <div id="GameDev">
+      <p id="GameDevTitle" class="headings">Game Development</p>
+      <p id="GameDevContent" class="text">Since the age of 15 Xander Grice has had a passion for game development. It began in his year 9 high school IT teacher. He started building 3D maze games from the beginning, writing a maze generation algorithm at 15. He continued to look into terrain generation and wrote his first itearation of infinite terrain generation at 16. From there his interest in game development has only risen. At 21 he wrote his first gaming engine, since when he has only improved upon it. Now he is regarded as one of the best Indie game developers out there.</p>
+      <image src="Images/UnityIcon.png" class="icons" id="icon3"></image>
+    </div>
+
+    <div id="WebDev">
+      <p id="WebDevTitle" class="headings">Website Development</p>
+      <p id="WebDevContent" class="text">Not only does Xander Grice have a wealth of experienec and skill when it comes to game development but website development as well. He first got interested in writing websites at the age of 12. Linked below are a couple of links to a couple of his most treasured projects, a launcher for google chrome and a very interesting graphic of constellations in the night sky. Please not that the second link is currently a work in progress.</p>
+      <image src="Images/HTML5icon.png" class="icons"  id="icon4"></image>
+      <a href="SampleSites/Launcher/Home.html" class="siteLinks" id="link1">Launcher</a>
+      <a href="SampleSites/Stars/index.html" class="siteLinks" id="link2">A Starry Night</a>
+    </div>
+
+      <div id="header">
+        <p id="headerTitle" class="headings">Xander Grice</p>
+        <a href="#mover" id="headerButton1" class="buttons">Employment History</a>
+        <a href="#empHist" id="headerButton2" class="buttons">Qualifications & Eductaion</a>
+        <a href="#QandE" id="headerButton3" class="buttons">Game Development</a>
+        <a href="#GameDev" id="headerButton4" class="buttons">Website Development</a>
+      </div>
+
+
+    <div id = "footer">
+    </div>
+
   </body>
 </html>
