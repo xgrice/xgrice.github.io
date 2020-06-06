@@ -10,7 +10,7 @@
         localStorage.setItem("backgroundNo",n)
         var location = localStorage.getItem("Location");
           //sets the background to the random image
-          document.body.style.backgroundImage = "url('images/image-" + n + ".jpg')";
+          document.body.style.backgroundImage = "url('SampleSites/Launcher/Images/image-" + n + ".jpg')";
               //calls some other functions to intiate the site
               startTime();
               logCheck();
@@ -133,9 +133,9 @@
           document.getElementById("city").innerHTML = data.name + " " + data.sys.country;
           var bg = localStorage.getItem("backgroundNo");
           if(bg > 10){
-            document.getElementById("icon").src="Icons/1/" + iconID + ".png";
+            document.getElementById("icon").src="SampleSites/Launcher/Icons/1/" + iconID + ".png";
           }else{
-            document.getElementById("icon").src="Icons/2/" + iconID + ".png";
+            document.getElementById("icon").src="SampleSites/Launcher/Icons/2/" + iconID + ".png";
           }
           var location = data.name;
           localStorage.setItem("Location",location);
