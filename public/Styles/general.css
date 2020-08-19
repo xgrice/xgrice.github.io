@@ -1,0 +1,133 @@
+@font-face {
+	font-family: Roboto;
+	src:url("Fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: RobotoBold;
+	src:url("Fonts/Roboto-Bold.ttf");
+}
+
+body {
+	max-width: 1000px;
+	overflow-x: hidden;
+}
+
+.txt {
+	font-family: Roboto, sans-serif;
+}
+
+.headings{
+	font-family: RobotoBold, sans-serif;
+	color: #696969;
+}
+
+.links{
+	font-family: Roboto, sans-serif;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 20px;
+	position: inherit;
+	background-color: none;
+	border-style: solid;
+	border-color: #132437; 
+	transition: background-color 1s, border-color 1s;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.links:hover{
+	background-color: #000000;
+	border-color: #FFFFFF;
+}
+
+.dividers{
+	border: solid;
+	border-width: 1px;
+	color: #FFFFFF;
+	position: inherit;
+}
+
+#header{
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height: 100px;
+	background-color: #132437;
+}
+
+#footer{
+	width: 2000px;
+	position: fixed;
+	padding: 0px;
+	margin: 0px;
+	bottom: 0px;
+	left: -10px;
+	height: 30px;
+	background-color: #132437;
+}
+
+#href1{
+	left: 210px;
+	top: 15px;
+}
+
+#href2{
+	left: 310px;
+	top: 15px;
+}
+
+#href3{
+	left: 485px;
+	top: 15px;
+}
+
+#href4{
+	left: 618px;
+	top: 15px;
+}
+
+#href5{
+	left: 775px;
+	top: 15px;
+}
+
+#logo{
+	height: 100px;
+	position: fixed;
+	left: 0px;
+}
+
+#refButton{
+	font-family: Roboto, sans-serif;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 15px;
+	position: inherit;
+	bottom: 2px;
+	left: 2px;
+	background-color: #132437;
+	border: solid;
+	border-color: #132437;
+	transition: background-color 1s, border-color 1s;
+	border-radius: 5px;
+}
+
+#refButton:hover{
+	background-color: #000000;
+	border-color: #FFFFFF;
+}
+
+#copyright{
+	font-size: 15px;
+	color: #FFFFFF;
+	position: fixed;
+	bottom: -10px;
+	width: 140px;
+}
+
+#divider1{
+	top: 0px;
+	left: 180px
+}

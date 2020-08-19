@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+.recipieItems{
+	position: relative;
+	padding: 0px;
+	margin: 2px;
+	font-style: italic;
+}
+
+#recipie1{
+	position: fixed;
+	top: 180px;
+	left: 20px;
+	border: solid;
+	border-radius: 5px;
+	height: 400px;
+}
+
+#recipie2{
+	position: fixed;
+	top: 180px;
+	left: 400px;
+	border: solid;
+	border-radius: 5px;
+	height: 400px;
+}
+
+.recipiePart2{
+	top: 4px;
+}
+
+.recipiePart3{
+	top: 6px;
+	left: 20px;
+}
+
+.recipiePart4{
+	top: 8px;
+	left: 20px;
+}
+
+.recipiePart5{
+	top: 10px;
+	left: 20px;
+}
+
+.recipiePart6{
+	top: 12px;
+	left: 20px;
+}
+
+.recipiePart7{
+	top: 14px;
+	left: 20px;
+}
+
+.recipiePart8{
+	top: 16px;
+	left: 20px;
+}
+
+.recipieImgs{
+	width: 310px;
+}
+
+#recipie2Part2{
+	left: 20px;
+}

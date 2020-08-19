@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<title>Happy Cafe Home</title>
+	<link rel="stylesheet" href="styles/stylesHome.css">
+	<link rel="stylesheet" href="styles/general.css">
+	<script src="JS/referencing.js"></script>
+	
+	<script>
+		function setup(){
+			centering();
+		}
+		
+		function centering(){
+			var w = window.innerWidth;
+			
+			var string = w - 540 + "px";
+			
+			for(i = 0; i < 7; i++){
+				var stringName = "bodyText" + (+i + +1);
+				document.getElementById(stringName).style.maxWidth = string;
+			}
+			
+			string = w + "px";
+			document.getElementById("img1").style.width = string;
+			
+			var num = -1 * (2*w/3) + 280;
+			string = num + "px";
+			document.getElementById("img1").style.top = string;
+			
+			string = w - 140 + "px";
+			document.getElementById("copyright").style.left = string;
+		}
+		
+		function reCentre(){
+			var w = window.innerWidth;
+			
+			var string = w - 540 + "px";
+			
+			for(i = 0; i < 7; i++){
+				var stringName = "bodyText" + (+i + +1);
+				document.getElementById(stringName).style.width = string;
+			}
+			
+			string = w - 140 + "px";
+			document.getElementById("copyright").style.left = string;
+			
+			string = w + "px";
+			document.getElementById("img1").style.width = string;
+						
+			var num = -1 * (2*w/3) + 280;
+			string = num + "px";
+			document.getElementById("img1").style.top = string;
+		}
+		
+		window.addEventListener("resize", reCentre());
+	</script>
+	
+</head>
+
+<body onload="setup()" id="body">
+	<img id="img1" src="Images/homeImg.jpg" alt="The stunning view from our restaurant.">
+	<p id="imgTitle" class="txt">The stunning view from our premises</p>
+	<hr id="imgDivider">
+	
+	<div id="header">
+		<img src="Images/logo.jpg" id="logo" alt="logo">
+		<hr id="divider1" class="dividers" size="80" width="0">
+		<a href="index.html" id="href1" class="links">Home</a>
+		<a href="placeOrder.html" id="href2" class="links">Place an Order</a>
+		<a href="menu.html" id="href3" class="links">Our Menu</a>
+		<a href="recipies.html" id="href4" class="links">Our Recipies</a>
+		<a href="mailto: JPapazoglou@stpeters.sa.edu.au?Subject=%20Give%20Me%20A%20Good%20Grade" id="href5" class="links">Contact Us</a>
+	</div>
+	
+
+	<div id="vidDiv">
+		<video controls id="vid">
+			<source src="Images/ChefsVideo.mp4">
+		</video>
+		<p id="videoCaption" class="txt">A short video from our world renowned chef.</p>
+	</div>
+	
+	<div id="mainBodyText">
+		<p id="bodyText1" class="txt bodyText"><em>Welcome to Happy Cafe. We hope you enjoy your meal with us.</em></p>
+		
+		<p id="bodyText2" class="headings bodyText"><em>A community cafe serving home cooked, locally sourced, organic food.</em></p>
+		
+		<p id="bodyText3" class="txt bodyText"><em>With stunning views of the ocean, Happy Cafe offers the perfect environment to unwind and recharge the batteries.</em></p>
+		
+		<p id="bodyText4" class="txt bodyText"><em>Our menu offers a wide range of breakfasts, brunches and lunches, including vegetarian options.</em></p>
+		
+		<p id="bodyText5" class="txt bodyText"><em>Whether you sip on a fresh, hot coffee or a cooling smoothie, you never need to feel rushed - relax with friends or just watch the world go by.</em></p>
+		
+		<p id="bodyText6" class="txt bodyText"><em>This weekend's special brunch</em></p>
+		
+		<p id="bodyText7" class="txt bodyText"><em>This weekend, our season of special brunches continues with scrambled egg on an English muffin. Not for the faint-hearted, the secret to these eggs is that they are made with half cream and cooked in butter, with no more than four eggs in the pan at a time.</em></p>
+		
+		<a href="https://www.zomato.com/adelaide/sad-cafe-city-centre" id="sadCafeLink" class="txt bodyText">Click here to visit our sister cafe's website.</a>
+		
+	</div>
+	
+	<div id="footer">
+		<button onclick="generateReference()" id="refButton">Get Reference Here</button>
+		<p id="copyright" class="txt">© Happy Cafe 2020</p>
+	</div>
+</body>
+</html>

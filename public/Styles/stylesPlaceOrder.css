@@ -1,0 +1,37 @@
+#options{
+	position: fixed;
+	top: 120px;
+	width: 240px;
+	left: 20px;
+}
+
+.menuItems{
+	position: relative;
+	width: 200px;
+	height: 40px;
+	margin: 2px;
+	border: solid;
+	background-color: white;
+	border-width: 1px;
+	border-radius: 3px;
+	transition: background-color 0.8s, color 0.8s;
+}
+
+.menuItems:hover{
+	background-color: black;
+	color: white;
+}
+
+#send{
+	position: fixed;
+	top: 200px;
+	right: 80px;
+}
+
+#menuImg{
+	height: 480px;
+	position: fixed;
+	top: 120px;
+	left: 300px;
+	border-style: none;
+}

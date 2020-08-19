@@ -1,0 +1,107 @@
+body{
+}
+
+#vidDiv{
+	position: fixed;
+	top: 290px;
+	border: solid;
+	border-width: 2px;
+	height: 340px;
+	width: 470px;
+	left: 20px;
+}
+
+#vid{
+	height: 300px;
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
+#videoCaption{
+	position: relative;
+	left: 10px;
+	top: -3px;
+}
+
+#mainBodyText{
+	max-width: 500px;
+}
+
+.bodyText{
+	position: fixed;
+/*	max-width: 500px;*/
+	padding: 0px;
+	margin: 0px;
+	text-align: justify;
+	left: 510px;
+	font-style: italic;
+}
+
+#bodyText1{
+	top: 290px;
+}
+
+#bodyText2{
+	top: 325px;
+}
+
+#bodyText3{
+	top: 365px;
+}
+
+#bodyText4{
+	top: 405px;
+}
+
+#bodyText5{
+	top: 450px;
+}
+
+#bodyText6{
+	top: 510px;
+}
+
+#bodyText7{
+	top: 535px;
+}
+
+#sadCafeLink{
+	text-decoration: none;
+	position: fixed;
+	color: #000000;
+	top: 610px;
+	transition: background-color 1s, color 1s;
+}
+
+#sadCafeLink:hover{
+	background-color: #132437;
+	color: #FFFFFF;
+}
+
+#img1{
+	position: fixed;
+	left: 0px;
+}
+
+#imgTitle{
+	position: fixed;
+	left: 0px;
+	top: 259px;
+	padding: 3px;
+	padding-bottom: 0px;
+	margin: 0px;
+	font-size: 15px;
+	background-color: white;
+	opacity: 0.5;
+	border-top-right-radius: 4px;
+}
+
+#imgDivider{
+	position: fixed;
+	top: 270px;
+	left: 0px;
+	width: 100%;
+	border-color: black;
+	border-width: 2px;
+}
