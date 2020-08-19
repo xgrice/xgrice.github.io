@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Happy Cafe Recipies</title>
+	<link rel="stylesheet" href="styles/stylesRecipies.css">
+	<link rel="stylesheet" href="styles/general.css">
+	<script src="JS/referencing.js"></script>
+	<script>
+		function setup(){
+			centering();
+		}
+
+		function centering(){
+			var w = window.innerWidth;
+			var string = w - 140 + "px";
+
+			document.getElementById("copyright").style.left = string;
+
+			string = w/2 - 370 + "px";
+			document.getElementById("recipie1").style.left = string;
+
+			string = w/2 + 30 + "px";
+			document.getElementById("recipie2").style.left = string;
+		}
+	</script>
+</head>
+
+<body onload="setup()">
+	<div id="header">
+		<img src="Images/logo.jpg" id="logo" alt="logo">
+		<hr id="divider1" class="dividers" size="80" width="0">
+		<a href="index.html" id="href1" class="links">Home</a>
+		<a href="menu.html" id="href2" class="links">Our Menu</a>
+		<a href="recipies.html" id="href3" class="links">Our Recipies</a>
+		<a href="mailto: JPapazoglou@stpeters.sa.edu.au?Subject=%20Happy%20Cafe" id="href4" class="links">Contact Us</a>
+	</div>
+
+	<div id="recipie1">
+		<img id="recipie1Img" class="recipieImgs" src="Images/pancakes.jpeg" alt="Pancakes">
+		<p class="headings recipieItems recipiePart1">Worlds Best Pancakes Ingredients</p>
+		<p class="txt recipieItems recipiePart2">The following ingredients make one serving:</p>
+		<p class="txt recipieItems recipiePart3">• 2 eggs</p>
+		<p class="txt recipieItems recipiePart4">• 1 tablespoon of butter (10g)</p>
+		<p class="txt recipieItems recipiePart5">• 1/3 cup of cream (2 3/4 fl ounces)</p>
+		<p class="txt recipieItems recipiePart6">• A pinch of salt</p>
+		<p class="txt recipieItems recipiePart7">• Freshly milled black pepper</p>
+		<p class="txt recipieItems recipiePart8">• 3 fresh chives (chopped)</p>
+	</div>
+
+	<div id="recipie2">
+		<img id="recipie2Img" class="recipieImgs" src="Images/ricotta.jpg" alt="Ricotta Pancakes">
+		<p class="headings recipieItems recipiePart1">Ricotta pancake ingredients</p>
+		<p id= "recipie2Part2" class="txt recipieItems recipiePart2">• 13/4 cups ricotta</p>
+		<p class="txt recipieItems recipiePart3">• 3/4 cup milk</p>
+		<p class="txt recipieItems recipiePart4">• 4 eggs</p>
+		<p class="txt recipieItems recipiePart5">• 1 cup plain white flour</p>
+		<p class="txt recipieItems recipiePart6">• 1 teaspoon baking powder</p>
+		<p class="txt recipieItems recipiePart7">• 50g butter</p>
+		<p class="txt recipieItems recipiePart8">• Pinch of salt</p>
+	</div>
+
+	<div id="footer">
+		<button onclick="generateReference()" id="refButton">Get Reference Here</button>
+		<p id="copyright" class="txt">© Happy Cafe 2020</p>
+	</div>
+</body>
+</html>
